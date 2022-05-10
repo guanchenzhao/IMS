@@ -15,9 +15,9 @@ import org.springframework.stereotype.Component;
 public class SmsUtil {
 
 
-    private String ACCOUNT_SID = "AC8bd5bbc65ae0400f0520b6fcfa7d1ec2";
-    private String AUTH_TOKEN = "412a5413b424a44f8d542e5d82d2d82f";
-    private String serviceSid = "MG61f8806e554694db184603bd973ac7db";
+    private String ACCOUNT_SID = "";
+    private String AUTH_TOKEN = "";
+    private String serviceSid = "";
 
 
     public void sendSms(String number, String body) {
