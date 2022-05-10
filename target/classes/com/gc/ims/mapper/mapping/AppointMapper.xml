@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gc.ims.mapper.AppointMapper">
+
+
+    <select id="customPageList" resultType="com.gc.ims.model.dto.AppointVo"
+            parameterType="com.gc.ims.model.param.AppointParam">
+        SELECT a.`status` as "status",
+        a.id as id,
+        a.user_id AS "userId",
+        plan_date,
+        u.`name` AS "userName",
+        i.`name` as "inventoryName",
+        i.`id` as "inventoryId",
+        i.`create_time` as "createTime",
+        i.`update_time` as "updateTime"
+        from appointment a
+        LEFT JOIN `user` u on a.user_id = u.user_id
+        LEFT JOIN inventory i on a.inventory_id = i.id
+        where i.is_del = 0
+        <include refid="condition_sql"/>
+    </select>
+
+
+    <sql id="condition_sql">
+        <if test="paramCondition.userName != null ">
+            and u.`name` rlike #{paramCondition.userName}
+        </if>
+        <if test="paramCondition.inventoryName != null ">
+            and i.`name` rlike #{paramCondition.inventoryName}
+        </if>
+        <if test="paramCondition.status != null ">
+            and a.`status` = #{paramCondition.status}
+        </if>
+    </sql>
+</mapper>

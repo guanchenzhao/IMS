@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tcss559.com/xml/museum"
+           targetNamespace="http://www.tcss559.com/xml/museum" elementFormDefault="qualified">
+
+    <xs:element name="MuseumInfoRequest">
+        <xs:complexType>
+            <xs:sequence>
+<!--                <xs:element name="name" type="xs:string"/>-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MuseumInfoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MuseumInfo" type="tns:MuseumInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="MuseumInfo">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="openTime" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
