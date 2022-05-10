@@ -2,11 +2,27 @@
 
 ## Description
 
+The main purpose to develop this project is that practice the tools such as SpringBoot, MySQL, Mybatis, Mybatis-Plus, and Redis.
 
+**SpringBoot**
 
+Spring Boot is an open-source Java-based framework used to create a micro Service.
 
+**MySQL**
 
+MySQL is an [open-source](https://en.wikipedia.org/wiki/Open-source_software) [relational database management system](https://en.wikipedia.org/wiki/Relational_database_management_system) (RDBMS).
 
+**Mybatis**
+
+MyBatis is a first-class persistence framework with support for custom SQL, stored procedures, and advanced mappings. MyBatis eliminates almost all of the JDBC code and manual setting of parameters and retrieval of results. MyBatis can use simple XML or Annotations for configuration and map primitives, Map interfaces, and Java POJOs (Plain Old Java Objects) to database records.
+
+**mybatis-plus**
+
+Mybatis plus is an enhanced tool of Mybatis. After using Mybatis plus, we can not only use the unique functions of Mybatis-plus, but also use the native functions of Mybatis normally. 
+
+**Redis**
+
+Redis is an open-source, in-memory data store used by millions of developers as a database, cache, streaming engine, and message broker.
 
 
 
